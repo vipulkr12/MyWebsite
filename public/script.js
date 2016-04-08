@@ -25,7 +25,7 @@
                 controller  : 'aboutController'
             })
 			
-			.when('/china', {
+			.when('/china/:imageId', {
                 templateUrl : 'pages/China.html',
                 controller  : 'chinaController'
             })
