@@ -51,8 +51,8 @@
         $scope.message = 'Contact us! JK. This is just a demo.';
     });
 	
-	scotchApp.controller('chinaController', function($scope) {
+	scotchApp.controller('chinaController', ['$scope', '$routeParams', function($scope, $routeParams) {
         $scope.message = 'Contact us! JK. This is just a demo.',
-		$scope.myBackgroundUrl = "pages/First.jpg";
-    });
+		$scope.myBackgroundUrl = "pages/China_" + $routeParams.imageId + ".jpg";
+    }]);
 	
