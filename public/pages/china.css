@@ -1,0 +1,6 @@
+.backgroundImage {
+	margin: auto;
+    width:70em;
+    height:100%;
+    background-size: cover;
+}
