@@ -10,7 +10,7 @@
 
             // route for the home page
             .when('/', {
-                templateUrl : 'home.html',
+                templateUrl : 'pages/home/home.html',
                 controller  : 'mainController'
             })
 
@@ -39,8 +39,7 @@
 
     // create the controller and inject Angular's $scope
     scotchApp.controller('mainController', ['$scope', '$routeParams', function($scope, $routeParams) {
-        // create a message to display in our view
-        $scope.message = 'Everyone come and see how good I look!';
+		$scope.itemList = ["India", "Thailand", "Srilanka", "Australia", "New Zealand", "China"];
     }]);
 
     scotchApp.controller('aboutController', ['$scope', '$routeParams', function($scope, $routeParams) {
