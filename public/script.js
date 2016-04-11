@@ -16,13 +16,18 @@
 
             // route for the about page
             .when('/vipul', {
-                templateUrl : 'about.html',
+                templateUrl : 'pages/Template/tripPageTemplate.html',
                 controller  : 'aboutController'
             })
 			
 			.when('/vipul/:id', {
                 templateUrl : 'about.html',
                 controller  : 'aboutController'
+            })
+			
+			.when('/trip', {
+                templateUrl : 'pages/Template/tripPageTemplate.html',
+                controller  : 'tripController'
             })
 			
 			.when('/china/:imageId', {
@@ -44,6 +49,12 @@
 
     scotchApp.controller('aboutController', ['$scope', '$routeParams', function($scope, $routeParams) {
         $scope.message = 'Look! I am an about page.' + $routeParams.id;
+		$scope.itemList = ["about", "Thailand", "Srilanka", "Australia", "New Zealand", "China"];
+    }]);
+	
+	scotchApp.controller('tripController', ['$scope', '$routeParams', function($scope, $routeParams) {
+        $scope.message = 'Look! I am an about page.' + $routeParams.id;
+		$scope.itemList = ["trip", "Thailand", "Srilanka", "Australia", "New Zealand", "China"];
     }]);
 
     scotchApp.controller('contactController', function($scope) {
